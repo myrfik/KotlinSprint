@@ -12,5 +12,4 @@ fun main() {
     moveNumber = "2"
 
     println("$whence - $wherever; $moveNumber")
-
 }
