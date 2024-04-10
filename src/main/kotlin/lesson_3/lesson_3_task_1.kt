@@ -9,5 +9,4 @@ fun main() {
     greetings = "Добрый вечер"
 
     println("$greetings, $userName!")
-
 }
