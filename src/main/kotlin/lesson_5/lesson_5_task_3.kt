@@ -5,10 +5,10 @@ fun main() {
     val winningNum2 = 23
 
     println("Введите первое число: ")
-    val enteredNum1 = readLine()!!.toInt()
+    val enteredNum1 = readln().toInt()
 
     println("Введите второе число: ")
-    val enteredNum2 = readLine()!!.toInt()
+    val enteredNum2 = readln().toInt()
 
     val result = if ((enteredNum1 == winningNum1 || enteredNum1 == winningNum2)
         && (enteredNum2 == winningNum1 || enteredNum2 == winningNum2)
