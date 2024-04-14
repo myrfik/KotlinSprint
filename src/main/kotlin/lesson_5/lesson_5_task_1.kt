@@ -1,10 +1,12 @@
 package org.example.lesson_5
 
 fun main() {
-    println("Для входа вприложение необходимо решить матиматический пример: 10+22 \nВведите ответ: ")
-    val userResponse = readLine()!!.toInt()
+    val num1 = 10
+    val num2 = 22
+    println("Для входа вприложение необходимо решить матиматический пример: $num2 + $num2 \nВведите ответ: ")
+    val userResponse = readln().toInt()
 
-    val result = if (userResponse == 32) {
+    val result = if (userResponse == num1 + num2) {
         "Добро пожаловать!"
     } else {
         "Доступ запрещен!"
