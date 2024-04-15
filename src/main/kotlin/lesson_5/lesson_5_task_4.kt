@@ -11,12 +11,12 @@ fun main() {
         Ваше имя: 
     """.trimIndent()
     )
-    val userName = readLine()
+    val userName = readln()
 
     if (userName == "Zaphod") {
         println("Введите пароль: ")
 
-        val password = readLine()
+        val password = readln()
 
         if (password == "PanGalactic") {
             println(
