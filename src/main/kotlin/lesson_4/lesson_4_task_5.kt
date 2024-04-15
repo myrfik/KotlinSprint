@@ -19,7 +19,8 @@ fun main() {
     val favorableConditions = ((hullDamages == IS_DAMAGE) && ((crewComposition > MIN_CREW_SIZE)
             && (crewComposition <= MAX_CREW_SIZE)) && (amountOfProvisions > MIN_AMOUNT_PROVISION) &&
             ((weatherConditions == WEATHER) || (weatherConditions != WEATHER))) || ((hullDamages != IS_DAMAGE) &&
-            (crewComposition == MAX_CREW_SIZE) && (amountOfProvisions >= MIN_AMOUNT_PROVISION))
+            (crewComposition == MAX_CREW_SIZE) && (amountOfProvisions >= MIN_AMOUNT_PROVISION) &&
+            (weatherConditions == WEATHER))
 
     println("Корабль может отправиться в плавание: $favorableConditions")
 }
