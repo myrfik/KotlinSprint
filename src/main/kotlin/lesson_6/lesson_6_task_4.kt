@@ -1,10 +1,7 @@
 package org.example.lesson_6
 
-import kotlin.random.Random
-
 fun main() {
-    val hiddenNum = Random.nextInt(1, 10)
-
+    val hiddenNum = (0..9).random()
     var numOfAttempts = 5
 
     while (numOfAttempts > 0) {
