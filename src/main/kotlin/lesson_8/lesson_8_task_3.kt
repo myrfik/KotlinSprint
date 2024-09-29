@@ -6,9 +6,8 @@ fun main() {
     println("Введите ингредиент, который необходимо найти: ")
 
     val introducedIngredient = readln()
-    val filterArray = ingredientsForCarbonara.contains(introducedIngredient)
 
-    if (filterArray) {
+    if (ingredientsForCarbonara.contains(introducedIngredient)) {
         println("Ингредиент $introducedIngredient в рецепте есть")
 
     } else {
