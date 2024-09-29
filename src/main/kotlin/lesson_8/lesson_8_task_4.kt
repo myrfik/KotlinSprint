@@ -1,10 +1,8 @@
 package org.example.lesson_8
 
-
 fun main() {
     val ingredientsForPasta = arrayOf("макароны", "бекон", "соль", "перец", "пармезан", "сливки")
     println("Список ингридиентов для пасты: ")
-    var found = false
 
     for (ingredient in ingredientsForPasta) {
         println(ingredient)
@@ -16,21 +14,15 @@ fun main() {
     println("Введите ингридиент, который необходимо добавить")
     val newIngredient = readln()
 
-    for (ingredient in ingredientsForPasta) {
-        if (ingredient == replacementIngredient) {
-            found = true
+    val index = ingredientsForPasta.indexOf(replacementIngredient)
 
-            val index = ingredientsForPasta.indexOf(replacementIngredient)
-            ingredientsForPasta[index] = newIngredient
 
-            for (ingredient in ingredientsForPasta) {
-                println(ingredient)
-            }
-            break
+    if (index != -1) {
+        ingredientsForPasta[index] = newIngredient
+        for (ingredient in ingredientsForPasta) {
+            println(ingredient)
         }
-    }
-
-    if (!found) {
+    } else {
         println("Такого ингридиента нет в списке")
     }
 }
