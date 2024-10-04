@@ -4,8 +4,7 @@ fun main() {
     println("Введите пять названий ингредиентов блюда, разделяя их запятыми (с пробелом)")
     val enteredIngredient = readln()
 
-    val ingredientList = enteredIngredient.split(", ")
-    val sortedIngredientList = ingredientList.sorted()
+    val ingredientList = enteredIngredient.split(", ").sorted()
 
-    println(sortedIngredientList)
+    println(ingredientList)
 }
