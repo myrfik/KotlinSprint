@@ -22,7 +22,5 @@ fun main() {
         listOfIngredient.forEach {
             println(it)
         }
-    } else {
-        return
     }
 }
