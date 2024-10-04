@@ -1,7 +1,5 @@
 package org.example.lesson_10
 
-import sun.security.util.Password
-
 fun main() {
     println("Введите логин: ")
     val login = readln()
