@@ -1,14 +1,5 @@
 package org.example.lesson_10
 
-import kotlin.random.Random
-
-/*Напиши небольшую игру, в которой пользователь и компьютер по очереди бросают кости. Побеждает выбросивший наибольшее число.
-
-- поочередно выводи сообщение о ходе игрока и компьютера (отображать кто бросил, какие значения на кубиках);
-- бросок кости вынеси в отдельную функцию, в которой генерируется случайное число от 1 до 6;
-- в отдельные переменные сохрани результат работы функции для игрока и компьютера;
-- после сравнения результатов, выведи соответствующее сообщение в консоль. Например: "Победило человечество" или "Победила машина".*/
-
 fun main() {
     val resultForThePlayer = throwTheDice()
     println("Ход игрока...\nЗначение на кубике: $resultForThePlayer")
@@ -16,11 +7,13 @@ fun main() {
     val resultForTheComputer = throwTheDice()
     println("Ход компьютера...\nЗначение на кубике: $resultForTheComputer")
 
-    if (resultForThePlayer!! > resultForTheComputer!!) {
+    if (resultForThePlayer > resultForTheComputer) {
         println("Победило человечество")
+    } else if (resultForThePlayer == resultForTheComputer) {
+        println("Ничейный результат")
     } else {
         println("Победила машина")
     }
 }
 
-fun throwTheDice(): Int? = Random.nextInt(1, 7)
+fun throwTheDice(): Int = (1..6).random()
