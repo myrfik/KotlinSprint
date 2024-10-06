@@ -5,14 +5,15 @@ fun main() {
     val login = readln()
     println("Введите пароль: ")
     val password = readln()
-    validateDataLength(login = login, password = password)
-}
 
-
-fun validateDataLength(login: String?, password: String?) {
-    if (login?.length ?: 0 < 4 || password?.length ?: 0 < 4) {
+    if (validateDataLength(login, password)) {
         println("Логин или пароль недостаточно длинные")
     } else {
         println("Добро пожаловать!")
     }
+}
+
+fun validateDataLength(login: String, password: String): Boolean {
+    val maxLength = 4
+    return login.length < maxLength || password.length < maxLength
 }
