@@ -12,9 +12,9 @@ fun main() {
     val sortedIngredientList = ingredientList.sorted().toSet()
 
     if (sortedIngredientList.isNotEmpty()) {
-        val firstIngredient = sortedIngredientList.first().replaceFirstChar { it.uppercase() }
-
-        val finalList = listOf(firstIngredient) + sortedIngredientList.drop(1)
-        println(finalList.joinToString(", "))
+        println(
+            (sortedIngredientList.joinToString(separator = ", ", postfix = "."))
+                .replaceFirstChar { it.uppercase() }
+        )
     }
 }
